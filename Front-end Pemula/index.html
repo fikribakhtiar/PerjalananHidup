@@ -1,54 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Event World</title>
-  <style>
-    .contents {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 2px solid black;
-      padding: 15px;
-    }
-    
-    #generateButton {
-      margin-top: 5px;
-      margin-bottom: 15px;;
-    }
-  </style>
-</head>
-<body>
-<div class="contents" align="center" hidden>
-  <button id="incrementButton">Tekan Aku :)</button>
-  <h3>Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span></h3>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form World</title>
  
-<script>
-  function increment() {
-    document.getElementById('count').innerText++;
-    
-    if (document.getElementById('count').innerText == 7) {
-      const hiddenMessage = document.createElement('h4');
-      hiddenMessage.innerText = 'Selamat! Anda menemukan hadiah tersembunyi...';
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="contents">
+      <h2 align="center">Isi data diri</h2>
  
-      const image = document.createElement('img');
-      image.setAttribute('src', 'https://i.ibb.co/0V49VRZ/catto.jpg');
+      <div class="formContent">
+        <form id="formDataDiri">
+          <div class="form-element">
+            <label for="inputNama">Nama:</label><br />
+            <input type="text" id="inputNama" name="nama" placeholder="Nama Anda" required /><br />
+          </div>
  
-      const contents = document.querySelector('.contents');
-      contents.appendChild(hiddenMessage).appendChild(image);
-    }
-  }
-  
-  function welcome() {
-    alert('Sim salabim muncullah elemen-elemen HTML!');
-    const contents = document.querySelector('.contents');
-    contents.removeAttribute('hidden');
-  }
-  
-  // kita akan menulis kode menggunakan addEventListener di sini
-    window.addEventListener('load', welcome);
-    document.getElementById('incrementButton').addEventListener('click', increment);
-</script>
-</body>
+          <div class="form-element">
+            <label for="inputDomisili">Domisili:</label><br />
+            <input
+              type="text"
+              id="inputDomisili"
+              name="domisili"
+              placeholder="Domisili Anda"
+              required
+            /><br />
+          </div>
+ 
+          <div class="form-element">
+            <input type="submit" value="Submit Data" />
+          </div>
+        </form>
+      </div>
+ 
+      <h3 id="messageAfterSubmit"></h3>
+    </div>
+ 
+    <script src="index.js"></script>
+  </body>
 </html>
