@@ -5,10 +5,11 @@ hr {
   width: 95%;
 }
 
-li {
-  margin-top: 1%;
-  margin-bottom: 1%;
-  font-size: 120%;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
 }
 
 .contents {
@@ -22,42 +23,18 @@ li {
   margin-bottom: 1%;
 }
 
-.button {
-  padding-left: 1%;
-  padding-right: 1%;
-  font-size: 140%;
+.form-element {
+  margin: 2%;
 }
 
-.answer-button {
-  margin-left: 2%;
-  margin-right: 2%;
-  padding: 2%;
-  font-size: 140%;
-  width: 12%;
-}
-
-#total-stats {
-  float: right;
-  width: 40%;
-  height: 50%;
-}
-
-#gameboard {
-  float: left;
-  width: 55%;
+#user-form {
+  width: 50%;
   height: 40%;
 }
 
-#session-stats {
-  float: left;
+#user-list {
   margin-top: 1%;
   width: 55%;
-}
-
-#instructions {
-  float: right;
-  margin-top: 1%;
-  width: 40%;
 }
 
 #instructions-list {
